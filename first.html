@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Artist Memories</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h2 class="logo"> Artist Memories</h2>
+  <nav>
+    <button onclick="showPage('landing')">Home</button>
+    <button onclick="showPage('login')">Login</button>
+    <button onclick="showPage('signup')">Sign Up</button>
+    <button class="danger" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<!-- LANDING PAGE -->
+<div id="landing" class="page">
+  <h2 style="text-align:center">Explore Digital Art</h2>
+  <div class="masonry" id="landingGallery"></div>
+</div>
+
+<!-- SIGNUP -->
+<div id="signup" class="page">
+  <div class="card">
+    <h2>Create Account</h2>
+    <input id="suUser" placeholder="Username">
+    <input id="suPass" type="password" placeholder="Password">
+    <button class="primary-btn" onclick="signup()">Sign Up</button>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="page">
+  <div class="card">
+    <h2>Login</h2>
+    <input id="liUser" placeholder="Username">
+    <input id="liPass" type="password" placeholder="Password">
+    <button class="primary-btn" onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page">
+  <div class="card">
+    <h2>Your Dashboard</h2>
+    <input type="file" id="imageInput">
+    <button class="primary-btn" onclick="uploadImage()">Upload Image</button>
+    <p id="profileLink"></p>
+  </div>
+
+  <h3 style="text-align:center">Your Images</h3>
+  <div class="masonry" id="userGallery"></div>
+</div>
+
+<!-- PUBLIC PROFILE -->
+<div id="publicProfile" class="page">
+  <h2 id="publicName" style="text-align:center"></h2>
+  <div class="masonry" id="publicGallery"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
